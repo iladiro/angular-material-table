@@ -1,6 +1,6 @@
 {
   "name": "@iladiro/angular-material-table-library",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Angular Material Table library with filters",
   "license": "ISC",
   "peerDependencies": {
