@@ -4,11 +4,11 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 It is an Angular library based on Material to filter tabular data by columns. Here is an example:
 
-![Alt text](./projects/iladiro-angular-material-table/screenshots/table.png?raw=true "Table")
+![Alt text](./projects/iladiro-angular-material-table-library/screenshots/table.png?raw=true "Table")
 
-![Alt text](./projects/iladiro-angular-material-table/screenshots/filtered-table.png?raw=true "Filtered table")
+![Alt text](./projects/iladiro-angular-material-table-library/screenshots/filtered-table.png?raw=true "Filtered table")
 
-![Alt text](./projects/iladiro-angular-material-table/screenshots/filtered-table-2.png?raw=true "Filtered table")
+![Alt text](./projects/iladiro-angular-material-table-library/screenshots/filtered-table-2.png?raw=true "Filtered table")
 
 ## Before start
 1. Make sure to install ```@angular/material``` and ```@angular/cdk```
