@@ -24,12 +24,7 @@ import { FormsModule } from '@angular/forms';
     FormsModule
   ],
   exports: [
-    TableComponent,
-    TableCellComponent,
-    FilterFormComponent,
-    SelectedFilterComponent,
-    ReplacePipe,
-    DayDifferenceFromTodayPipe
+    TableComponent
   ]
 })
 export class IladiroAngularMaterialTableLibraryModule { }
