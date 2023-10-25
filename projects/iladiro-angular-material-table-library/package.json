@@ -2,7 +2,7 @@
   "name": "@iladiro/angular-material-table-library",
   "version": "0.0.1",
   "description": "Angular Material Table library with filters",
-  "license": "MIT",
+  "license": "ISC",
   "peerDependencies": {
     "@angular/common": "^16.2.0",
     "@angular/core": "^16.2.0",
@@ -16,6 +16,7 @@
     "@angular/material": "^16.2.9",
     "@angular/cdk": "^16.2.9"
   },
+  "private": false,
   "sideEffects": false,
   "keywords": [
     "table",

@@ -1,14 +1,15 @@
 {
-  "name": "iladiro-angular-material-table-library",
+  "name": "@iladiro/angular-material-table-library",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "lint": "ng lint"
   },
-  "private": true,
+  "private": false,
   "dependencies": {
     "@angular/animations": "^16.2.0",
     "@angular/cdk": "^16.2.10",
@@ -26,10 +27,18 @@
     "zone.js": "~0.13.0"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "^16.2.7",    
+    "@angular-devkit/build-angular": "^16.2.7",
+    "@angular-eslint/builder": "16.2.0",
+    "@angular-eslint/eslint-plugin": "16.2.0",
+    "@angular-eslint/eslint-plugin-template": "16.2.0",
+    "@angular-eslint/schematics": "16.2.0",
+    "@angular-eslint/template-parser": "16.2.0",
     "@angular/cli": "^16.2.7",
     "@angular/compiler-cli": "^16.2.0",
     "@types/jasmine": "~4.3.0",
+    "@typescript-eslint/eslint-plugin": "5.62.0",
+    "@typescript-eslint/parser": "5.62.0",
+    "eslint": "^8.49.0",
     "jasmine-core": "~4.6.0",
     "karma": "~6.4.0",
     "karma-chrome-launcher": "~3.2.0",
@@ -38,5 +47,21 @@
     "karma-jasmine-html-reporter": "~2.1.0",
     "ng-packagr": "^16.2.0",
     "typescript": "~5.1.3"
-  }
+  },
+  "description": "Angular Material Table library with filters",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/iladiro/angular-material-table"
+  },
+  "author": {
+    "name": "Iladiro",
+    "email": "dirosa.ilaria@gmail.com",
+    "url": "http://ilariadirosa.it/"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/iladiro/angular-material-table/issues"
+  },
+  "homepage": "https://github.com/iladiro/angular-material-table#readme"
 }
