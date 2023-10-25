@@ -1,0 +1,35 @@
+.iladiro-amt-table {
+    &__paginator ::ng-deep .mat-mdc-paginator-container {
+        justify-content: center;
+        padding: 0;
+        @media screen and (min-width: 992px) {
+            justify-content: space-between;
+        }
+    }
+    &__no-results {
+        text-align: center;
+        padding: 1em;
+    }
+    &__wrapper-cell {
+        position: relative;
+        font-weight: bold;
+        overflow: visible;
+    }
+    &__row {
+        display: flex;
+        &--buttons {
+            cursor: pointer;
+            border: none;
+            background-color: transparent;
+            padding-left: 0.7em;
+            padding-right: 0.7em;
+            border-right: 1px solid rgb(167 167 167);
+            display: flex;
+            align-items: center;
+            gap: 0.5em;
+            &:last-child {
+                border: none;
+            }
+        }
+    }
+}

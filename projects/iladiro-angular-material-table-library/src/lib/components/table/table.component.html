@@ -1,0 +1,65 @@
+<div [class]="customClass">
+  <iladiro-angular-material-table-selected-filter 
+    [filterValues]="filterValues" 
+    (removeFilterEvent)="removeFilter($event)" 
+    (removeAllFilterEvent)="removeAllFilter()">
+  </iladiro-angular-material-table-selected-filter>
+  <mat-table class="iladiro-amt-table" [dataSource]="dataSource"><!-- matSort -->
+    <ng-container *ngFor="let col of displayedColumns">
+      <ng-container *ngIf="col !== 'buttons'; else buttons">
+        <ng-container [matColumnDef]="col">
+          <mat-header-cell class="iladiro-amt-table__wrapper-cell" *matHeaderCellDef> <!-- mat-sort-header -->
+            <iladiro-angular-material-table-cell 
+              [inputPlaceholder]="inputPlaceholder" 
+              [closeAllFilter]="closeAllFilter" 
+              [cleanAllFilter]="cleanAllFilter" 
+              [cleanValue]="witchColumnFilterIsOpen.col === col ? witchColumnFilterIsOpen.clean : false" 
+              [col]="col" 
+              [isFilterOpen]="witchColumnFilterIsOpen.col === col ? witchColumnFilterIsOpen.open : false" 
+              (cleanFilterEvent)="cleanFilter($event, col)" 
+              (toggleFilterEvent)="toggleFilter($event, col, false)" 
+              (applyFilterEvent)="generateFilter($event, col)">
+            </iladiro-angular-material-table-cell>
+          </mat-header-cell>    
+          <mat-cell *matCellDef="let row">
+            {{row[col]}}
+          </mat-cell>
+        </ng-container>
+      </ng-container>
+      <ng-template #buttons>
+        <ng-container cdkColumnDef="buttons">
+          <mat-header-cell *matHeaderCellDef></mat-header-cell><!-- mat-sort-header -->
+          <mat-cell *matCellDef="let row" class="iladiro-amt-table__row">
+            <ng-container *ngFor="let item of row.buttons">
+              <button (click)="clickOn(row, item)" [title]="item.title" class="iladiro-amt-table__row--buttons">
+                <span *ngIf="item.label">{{item.label}}</span>
+                <mat-icon *ngIf="item.icon" aria-hidden="false" aria-label="Example close icon" [fontIcon]="item.icon"></mat-icon>
+              </button>            
+            </ng-container>            
+          </mat-cell>
+        </ng-container>      
+      </ng-template>  
+    </ng-container>
+
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+      <mat-row *matRowDef="let row; columns: displayedColumns;">
+    </mat-row>
+  </mat-table>
+
+  <div class="iladiro-amt-table__no-results" [style.display]="dataSource.filteredData.length !== 0 ? 'none' : 'block'">
+    {{noResultLabel}}
+  </div>
+
+  <mat-paginator #paginator
+    class="iladiro-amt-table__paginator"
+    aria-label="Select page"
+    [length]="length"
+    [pageIndex]="pageIndex"
+    [pageSize]="pageSize"
+    (page)="handlePageEvent($event)"
+    [showFirstLastButtons]="showFirstLastButtons"
+    [pageSizeOptions]="showPageSizeOptions ? pageSizeOptions : []"
+    [hidePageSize]="hidePageSize"
+    >
+  </mat-paginator>
+</div>

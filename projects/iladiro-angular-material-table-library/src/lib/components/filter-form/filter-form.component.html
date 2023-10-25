@@ -1,0 +1,8 @@
+<div id="{{col}}-filter" #formElement class="iladiro-amt-filter-form" [class]="isFilterOpen ? '' : 'hidden'">
+    <mat-form-field class="iladiro-amt-filter-form__input">
+        <input #inputSearchElement #inputSearch="ngModel" [(ngModel)]="filterValue"  matInput (keyup.enter)="applyFilter()" placeholder="{{inputPlaceholder}} {{col}}">
+        <button (click)="cleanFilter();" mat-icon-button matSuffix aria-label="clear" title="Clear">
+          <mat-icon aria-hidden="false" aria-label="Example close icon" fontIcon="close"></mat-icon>
+        </button>          
+    </mat-form-field>
+</div>

@@ -1,0 +1,13 @@
+<div *ngIf="filterValues.length > 0" class="iladiro-amt-selected-filter">
+    <ng-container *ngFor="let filter of filterValues; let i = index">
+      <div class="iladiro-amt-selected-filter__item">
+        <span>{{filter.value}}</span>
+        <button class="iladiro-amt-selected-filter__item-button iladiro-amt-selected-filter__item-button--clear" (click)="removeFilter(i, filter);" aria-label="reset" title="Remove">
+          <mat-icon aria-hidden="false" aria-label="Example close icon" fontIcon="close"></mat-icon>
+        </button>
+      </div>
+    </ng-container>
+    <button class="iladiro-amt-selected-filter__button" (click)="removeAllFilter();" aria-label="reset" title="Remove all filters">
+      <mat-icon aria-hidden="false" aria-label="Example filter_list_off icon" fontIcon="filter_list_off"></mat-icon>
+    </button>
+</div>

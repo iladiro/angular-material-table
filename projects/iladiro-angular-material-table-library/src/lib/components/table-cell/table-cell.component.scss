@@ -1,0 +1,22 @@
+.iladiro-amt-table {
+    &__cell {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        button {
+            border: none;
+            background-color: transparent;
+            cursor: pointer;
+        }
+    }
+    &__wrapper-filter {
+        padding-top: 5px;
+        position: absolute;        
+        z-index: 10;
+        top: 0;
+        transform: translateY(50%);
+        ::ng-deep .mat-mdc-text-field-wrapper {
+            background-color: white;
+        }
+    }
+}

@@ -1,0 +1,31 @@
+.iladiro-amt-selected-filter {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    margin-bottom: 0.75rem;
+    &__item {
+        text-transform: uppercase;
+        display: flex;
+        align-items: center;
+        color: black;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        border-radius: 9999px;
+        background-color: rgb(229 231 235);
+        gap: 0.5rem;
+        &-button {        
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+        }
+    }
+    &__button {
+        color: black;
+        font-weight: bold;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+    }
+}

@@ -1,0 +1,24 @@
+<div class="iladiro-amt-table__cell">
+    <span>{{col[0].toUpperCase() + col.slice(1) | replace : '_' : ' '}}</span>
+    <button (click)="toggleFilter();" [title]="isFilterOpen ? 'Close' : 'Open'">
+        <ng-container *ngIf="isFilterOpen; else open">
+            <mat-icon aria-hidden="false" aria-label="Close" fontIcon="expand_less"></mat-icon>
+        </ng-container> 
+        <ng-template #open>
+            <mat-icon aria-hidden="false" aria-label="Open" fontIcon="expand_more"></mat-icon>
+        </ng-template>    
+    </button>
+</div>  
+<div class="iladiro-amt-table__wrapper-filter">    
+    <iladiro-angular-material-table-filter-form 
+        [col]="col" 
+        [inputPlaceholder]="inputPlaceholder" 
+        [closeAllFilter]="closeAllFilter" 
+        [cleanAllFilter]="cleanAllFilter" 
+        [cleanValue]="cleanValue" 
+        [isFilterOpen]="isFilterOpen" 
+        (cleanFilterEvent)="cleanFilter($event)" 
+        (closeFilterEvent)="closeFilter()" 
+        (applyFilterEvent)="applyFilter($event)">
+    </iladiro-angular-material-table-filter-form>
+</div>   

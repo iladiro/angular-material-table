@@ -1,12 +1,40 @@
 {
-  "name": "iladiro-angular-material-table-library",
+  "name": "@iladiro/angular-material-table-library",
   "version": "0.0.1",
+  "description": "Angular Material Table library with filters",
+  "license": "MIT",
   "peerDependencies": {
     "@angular/common": "^16.2.0",
-    "@angular/core": "^16.2.0"
+    "@angular/core": "^16.2.0",
+    "@angular/material": "^16.2.9",
+    "@angular/cdk": "^16.2.9"
   },
   "dependencies": {
     "tslib": "^2.3.0"
   },
-  "sideEffects": false
+  "devDependencies": {
+    "@angular/material": "^16.2.9",
+    "@angular/cdk": "^16.2.9"
+  },
+  "sideEffects": false,
+  "keywords": [
+    "table",
+    "npm",
+    "package",
+    "iladiro",
+    "typescript",
+    "angular 16",
+    "angular",
+    "filters",
+    "material"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/iladiro/angular-material-table"
+  },
+  "author": {
+    "name": "Iladiro",
+    "email": "dirosa.ilaria@gmail.com",
+    "url": "http://ilariadirosa.it/"
+  }
 }
