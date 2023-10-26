@@ -13,18 +13,17 @@ It is an Angular library based on Material to filter tabular data by columns. He
 ## Before start
 1. Make sure to install ```@angular/material``` and ```@angular/cdk```
 1. Import a material theme on your preference. Ex: ```@import '../node_modules/@angular/material/prebuilt-themes/indigo-pink.css';```. May not works as expected without it.
-1. Add in your project index.html ```<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">```. ItI could be impossible to see the material's icons without it.
+1. Add in your project index.html ```<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">```. It could be impossible to see the material's icons without it.
 1. Import in your module ```import { BrowserAnimationsModule } from '@angular/platform-browser/animations';```
-1. npm i @iladiro/angular-material-table-library<br>
-1. Import a Material theme on your preference from ```import { IladiroAngularMaterialTableLibraryModule } from '@iladiro/angular-material-table-library';```.
+1. npm i @iladiro/angular-material-table-library
+1. Import a Material theme, on your preference from ```import { IladiroAngularMaterialTableLibraryModule } from '@iladiro/angular-material-table-library';```.
 
 ## Getting Setup
 
 Use ```<iladiro-angular-material-table></iladiro-angular-material-table>``` selector to show table
 
 ## Interface
-You need to map your array objects in an object's list compatible with the library based on custom interface.<br>
-Each column of the table has to match with interface properties<br><br>
+Your data is an array of object of your custom interface type. The object's properties must match table columns (es. `First Name` column is `first_name` property of your object interface)<br><br>
 
 For example, this is my custom interface
 
@@ -35,11 +34,12 @@ For example, this is my custom interface
             buttons?: IladiroAMTButton[];
         }
 
-Note: About buttons property is not required but the interface to import in your project has to be IladiroAMTButton[] and the property must have exactly this name
+Note: buttons property is optional. If you use it, it must be an array of type IladiroAMTButton interface.<br><br>
+Import it from ```import { IladiroAMTButton } from '@iladiro/angular-material-table-library';```<br><br>
+Each button's properties are required. If you don't need some property set it as empty string.<br><br>
+If we need to use icons, please use material icons.
 
 ## Example 
-
-The example below shows the mandatory data!<br><br>
 
 <pre>
     const list: TableList[] = [
@@ -48,26 +48,26 @@ The example below shows the mandatory data!<br><br>
             surname: 'Brown',
             gender: 'male',
             buttons: [
-            {
-                icon: "open_in_new",
-                label: "View",
-                action: "view",
-                link: "",
-                title: "View"
-            },
-            {
-                icon: "delete",
-                label: "",
-                action: "delete",
-                link: "",
-                title: "Delete"
-            }
+                {
+                    icon: "open_in_new",
+                    label: "View",
+                    action: "view",
+                    link: "",
+                    title: "View"
+                },
+                {
+                    icon: "delete",
+                    label: "",
+                    action: "delete",
+                    link: "",
+                    title: "Delete"
+                }
             ]
         }
     ]
 </pre>
 
-<strong>Default</strong>
+<strong>Default: example with only mandatory data!<br><br></strong>
 
 ```<iladiro-angular-material-table [list]="list" [displayedColumns]="['name', 'surname', 'gender', 'buttons']"></iladiro-angular-material-table>```
 
@@ -80,7 +80,7 @@ The example below shows the mandatory data!<br><br>
   Property | Type | Required | Default | Notes
   ------------ | ------------- | ------------- | ------------- | -------------
   list | ``` Array ``` | yes | ``` undefined ``` | This widget expect a list to show it.   
-  displayedColumns | ``` Array<string> ``` | yes | ``` undefined ``` | To show columns in the table you have to pass an array of string where each value match with the properties of the custom interface. Ex: [displayedColumns]="['name', 'surname', 'gender', 'buttons']"    
+  displayedColumns | ``` Array<string> ``` | yes | ``` undefined ``` | To show columns in the table you have to pass an array of string where each value match with the properties of the custom interface. Ex: [displayedColumns]="['name', 'surname', 'gender', 'buttons']".    
   inputPlaceholder | ``` String ``` | no | ``` Find by ``` | You can also pass a placeholder to show into filter input field
   customClass | ``` String ``` | no | ``` undefined ``` | You can also pass a class or a list of classes to add to the parent 
   noResultLabel | ``` String ``` | no | ``` No results ``` | You can also pass a custom text to show when no result returned
