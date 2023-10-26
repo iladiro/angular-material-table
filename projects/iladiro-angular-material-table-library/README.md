@@ -67,7 +67,7 @@ If we need to use icons, please use material icons.
     ]
 </pre>
 
-<strong>Default: example with only mandatory data!<br><br></strong>
+<strong>Default: example with only mandatory data!</strong>
 
 ```<iladiro-angular-material-table [list]="list" [displayedColumns]="['name', 'surname', 'gender', 'buttons']"></iladiro-angular-material-table>```
 
