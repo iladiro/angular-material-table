@@ -13,6 +13,7 @@ It is an Angular library based on Material to filter tabular data by columns. He
 ## Before start
 1. Make sure to install ```@angular/material``` and ```@angular/cdk```
 1. Import a material theme on your preference. Ex: ```@import '../node_modules/@angular/material/prebuilt-themes/indigo-pink.css';```. May not works as expected without it.
+1. Add in your project index.html ```<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">```. ItI could be impossible to see the material's icons without it.
 1. Import in your module ```import { BrowserAnimationsModule } from '@angular/platform-browser/animations';```
 1. npm i @iladiro/angular-material-table-library<br>
 1. Import a Material theme on your preference from ```import { IladiroAngularMaterialTableLibraryModule } from '@iladiro/angular-material-table-library';```.
