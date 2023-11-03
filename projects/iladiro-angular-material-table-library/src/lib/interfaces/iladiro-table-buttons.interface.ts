@@ -3,5 +3,6 @@ export interface IladiroAMTButton {
     icon: string,
     label: string,
     link: string,
-    title: string
+    title: string,
+    disable: boolean
 }

@@ -55,14 +55,16 @@ If we need to use icons, please use material icons.
                     label: "View",
                     action: "view",
                     link: "",
-                    title: "View"
+                    title: "View",
+                    disable: false
                 },
                 {
                     icon: "delete",
                     label: "",
                     action: "delete",
                     link: "",
-                    title: "Delete"
+                    title: "Delete",
+                    disable: false
                 }
             ]
         }

@@ -19,9 +19,9 @@ export class TableComponent<T> implements OnInit, OnChanges {
   @Input() showPageSizeOptions = true;
   @Input() pageSizeOptions: number[] = [5, 10, 15];
   @Input() noResultLabel = "No results";
-  @Input() showFirstLastButtons: boolean = true;
-  @Input() pageSize: number = 5;
-  @Input() hidePageSize: boolean = false;
+  @Input() showFirstLastButtons = true;
+  @Input() pageSize = 5;
+  @Input() hidePageSize = false;
   @Input() customClass!: string;
   @Input() list!: T[];
   @Input() displayedColumns!: ObjectKey<T>[];
