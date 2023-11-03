@@ -1,6 +1,8 @@
 # MaterialTableFilter Documentation
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.7.<b><br>
+This library is compatible with Angular versions >=16.0.0.0
+
+Note: Please use version from 0.0.6, which is compatible with Angular versions >=16.0.0, older versions are only compatible with Angular version ^16.2.7. It was my mistake! Thank you<br><br>
 
 It is an Angular library based on Material to filter tabular data by columns. Here is an example:
 
